@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionário de Treino</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Monte seu Treino</h1>
+
+      <div class="aviso">
+        <strong>Aviso:</strong> Verifique se você pode treinar. Consulte um
+        médico ou profissional de educação física para avaliar sua condição
+        cardiorrespiratória antes de iniciar qualquer atividade.
+      </div>
+
+      <form id="workout-form">
+        <fieldset>
+          <legend>1 - Qual seu nível?</legend>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="nivel" value="iniciante" required />
+              Iniciante</label
+            >
+            <label
+              ><input type="radio" name="nivel" value="intermediario" />
+              Intermediário</label
+            >
+            <label
+              ><input type="radio" name="nivel" value="avancado" />
+              Avançado</label
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2 - Qual seu objetivo?</legend>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                name="objetivo"
+                value="hipertrofia"
+                required
+              />
+              Estética/Hipertrofia</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="objetivo"
+                value="funcionalidade"
+                disabled
+              />
+              Funcionalidade (em breve)</label
+            >
+            <label
+              ><input type="radio" name="objetivo" value="forca" disabled />
+              Força (em breve)</label
+            >
+            <label
+              ><input type="radio" name="objetivo" value="perda_peso" /> Perda
+              de Peso</label
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3 - Qual seu sexo?</legend>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="sexo" value="masculino" required />
+              Masculino</label
+            >
+            <label style="color: #999; cursor: not-allowed"
+              ><input type="radio" name="sexo" value="feminino" disabled />
+              Feminino (em breve)</label
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <label for="peso">4 - Qual seu peso? (kg)</label>
+          <input
+            type="number"
+            id="peso"
+            name="peso"
+            placeholder="Ex: 70"
+            required
+          />
+
+          <label for="altura">5 - Qual sua altura? (cm)</label>
+          <input
+            type="number"
+            id="altura"
+            name="altura"
+            placeholder="Ex: 175"
+            required
+          />
+
+          <label for="idade">6 - Qual sua idade?</label>
+          <input
+            type="number"
+            id="idade"
+            name="idade"
+            placeholder="Ex: 25"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Disponibilidade</legend>
+          <label for="dias_semana"
+            >7 - Quantos dias da semana você pode treinar?</label
+          >
+          <select id="dias_semana" name="dias_semana" required>
+            <option value="" disabled selected>Selecione a frequência</option>
+            <option value="3">3 dias</option>
+            <option value="4">4 dias</option>
+            <option value="5">5 dias</option>
+            <option value="6">6 dias</option>
+          </select>
+
+          <label>8 - Quais dias?</label>
+          <div class="checkbox-group">
+            <label
+              ><input type="checkbox" name="dias_disponiveis" value="segunda" />
+              Segunda</label
+            >
+            <label
+              ><input type="checkbox" name="dias_disponiveis" value="terca" />
+              Terça</label
+            >
+            <label
+              ><input type="checkbox" name="dias_disponiveis" value="quarta" />
+              Quarta</label
+            >
+            <label
+              ><input type="checkbox" name="dias_disponiveis" value="quinta" />
+              Quinta</label
+            >
+            <label
+              ><input type="checkbox" name="dias_disponiveis" value="sexta" />
+              Sexta</label
+            >
+            <label
+              ><input type="checkbox" name="dias_disponiveis" value="sabado" />
+              Sábado</label
+            >
+            <label
+              ><input type="checkbox" name="dias_disponiveis" value="domingo" />
+              Domingo</label
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>9 - Quanto tempo de treino você tem disponível?</legend>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="tempo_treino" value="30" required /> 30
+              min</label
+            >
+            <label
+              ><input type="radio" name="tempo_treino" value="50" /> 50
+              min</label
+            >
+            <label
+              ><input type="radio" name="tempo_treino" value="70" /> 70
+              min</label
+            >
+            <label
+              ><input type="radio" name="tempo_treino" value="90" /> 90
+              min</label
+            >
+            <label
+              ><input type="radio" name="tempo_treino" value="120" /> 120
+              min</label
+            >
+          </div>
+        </fieldset>
+
+        <input type="submit" value="Gerar Treino" />
+      </form>
+
+      <div id="resultado-treino" style="display: none"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

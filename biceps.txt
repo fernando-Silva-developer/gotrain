@@ -1,0 +1,4 @@
+1 Scott (maquina, alterer, barra w)
+2 Rosca bayesiana (polia, maquina, alterer)
+3 Rosca martelo (alterer, polia)
+4 Rosca direta (alterer, barra w, polia)
