@@ -1,9 +1,0 @@
-1 Barra fixa pronada/supinada
-1 Puxada alta pronada/neutra/supinada
-2 Remada com alter
-2 Remada sagital na máquina
-2 Remada pronada/supinada/neutra
-2 Remada curvada
-2 Remada Cavalinho
-2 Pull down
-2 T-bar
